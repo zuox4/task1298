@@ -1,0 +1,74 @@
+.MyTasks {
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+    /*width: 300px;*/
+
+    /*background-color: rgba(255,255,255,0.2);*/
+    height: 90%;
+    overflow-y: auto;
+}
+.Left{
+    width: 20%;
+    height: 100vh;
+    border-right: solid 10px white;
+    background: linear-gradient(to right top, #39f393, lightblue, cornflowerblue);
+
+}
+.TaskContent >h3{
+    color: white;
+    font-size: 16px;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+.TaskContent{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    align-items: center;
+}
+.task-panel{
+    color: white;
+    display: flex;
+    height: fit-content;
+    overflow: clip;
+    flex-direction: column;
+    width: 100%;
+    backdrop-filter: blur(1px);
+
+    background-color: rgba(63, 63, 63, 0.5);
+    align-items: center;
+    border-radius: 10px;
+    padding-bottom: 10px;
+}
+
+.user-task{
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 266, 0.3);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px;
+    width: 90%;
+    margin-top: 10px;
+    align-items: center;
+}
+.user-task span{
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+@media (max-width: 800px) {
+    .Left{
+        display: none;
+
+    }
+}

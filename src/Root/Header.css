@@ -1,0 +1,41 @@
+.header{
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    position: fixed;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+}
+
+.header >img{
+    width: 211px;
+    height: min-content;
+    margin-left: 10px;
+}
+
+.about-user{
+    display: flex;
+    flex-direction: row;
+    width: max-content;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-user > p{
+    margin: 0;
+}
+
+.about-user > div{
+    margin-right: 11px;
+}
+
+.nick-name{
+    align-items: center;
+    align-content: end;
+    font-family: "IBM Plex Sans", sans-serif;
+    height: 30px;
+
+    border-radius: 10px;
+}
