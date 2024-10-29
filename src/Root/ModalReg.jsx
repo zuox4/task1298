@@ -1,14 +1,15 @@
 import React from 'react';
-import axios from "axios";
+
 import './ModalReg.css'
 import {getSessionToken} from "@descope/react-sdk";
+import {axiosApi} from "../../api.js";
 
 const ModalReg = ({ isOpen, setIsOpen, setNickName }) => {
     const sessionToken = getSessionToken();
     const [name, setName] = React.useState("");
 
     function handleSaveButton(){
-        axios.post('http://192.168.1.7:2502/create_user',{username:name}, {
+        axiosApi.post('create_user',{username:name}, {
             headers: {
                 Authorization: 'Bearer ' + sessionToken,
                 Accept: 'application/json',
