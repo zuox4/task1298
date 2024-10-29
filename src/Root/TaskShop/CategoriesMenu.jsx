@@ -10,6 +10,7 @@ import schoolActivLogo from "../../assets/categories/schoolactivities.svg"
 import usuLogo from "../../assets/categories/ushu.svg"
 import othersLogo from "../../assets/categories/others.svg"
 import classLogo from "../../assets/categories/classHelp.svg"
+import {axiosApi} from "../../../api.js";
 
 
 const CategoriesMenu = ()=>  {
@@ -27,7 +28,7 @@ const CategoriesMenu = ()=>  {
 
     function getCategories(){
         setLoading(true)
-        axios.get('/categories', {
+        axiosApi.get('/categories', {
             headers: {
                 Authorization: 'Bearer ' + sessionToken,
                 Accept: 'application/json',
