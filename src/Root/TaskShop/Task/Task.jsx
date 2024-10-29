@@ -31,12 +31,12 @@ const Task = ({task})=> {
     return (
         <div className={'Task'} style={{height:'fit-content'}}>
             {openModal&&<ModalQuestion openModal={openModal} setOpenModal={setOpenModal}/>}
-            <div className={'infoTask'} style={{gridTemplateColumns:!task.urgency&&'min-content 1fr 1fr'}}>
-                {task.urgency&&<img style={{width:'10px', marginRight:'5px'}} src={molniya} alt={''}/>}
-                <img src={logos[task['categoryId']]} alt={''}/>
-                <span className={'hashteger'}>{task.hashtags.map(tag=>tag + ' ')}</span>
-                <div className={'customer'}><span>{task.author}</span></div>
-            </div>
+            {/*<div className={'infoTask'} style={{gridTemplateColumns:!task.urgency&&'min-content 1fr 1fr'}}>*/}
+            {/*    {task.urgency&&<img style={{width:'10px', marginRight:'5px'}} src={molniya} alt={''}/>}*/}
+            {/*    <img src={logos[task['categoryId']]} alt={''}/>*/}
+            {/*    <span className={'hashteger'}>{task.hashtags.map(tag=>tag + ' ')}</span>*/}
+            {/*    <div className={'customer'}><span>{task.author}</span></div>*/}
+            {/*</div>*/}
             <div style={{display:'flex', justifyContent:'space-between', marginTop:'4px', alignItems:'center'}}>
                 <div className={'content'}>
                     <h3 style={{margin: 0}}>{task.title}</h3>
