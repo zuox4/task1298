@@ -1,0 +1,45 @@
+.Profile{
+    width: 100%;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.ConfirmTaskInfoButton{
+    width: 200px;
+    background-color: rgba(255,173,70,0.8);
+    border-radius: 7px;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 7px;
+    font-family: Inter, sans-serif;
+    text-align: center;
+    margin: 10px;
+
+}
+.logout{
+    color: red;
+    text-decoration: underline;
+}
+
+.list-options{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
+.button-option{
+    display: flex;
+    flex-direction: row;
+
+    background-color: #e2e2e2;
+    color: black;
+    height: 30px;
+    padding: 3px;
+    align-content: flex-end;
+    line-height: 2;
+    align-items: center;
+    justify-content: space-between;
+
+}

@@ -11,6 +11,7 @@ import usuLogo from "../../assets/categories/ushu.svg"
 import othersLogo from "../../assets/categories/others.svg"
 import classLogo from "../../assets/categories/classHelp.svg"
 
+
 const CategoriesMenu = ()=>  {
     const [loading, setLoading] = useState(true);
     const sessionToken = getSessionToken();
@@ -26,7 +27,7 @@ const CategoriesMenu = ()=>  {
 
     function getCategories(){
         setLoading(true)
-        axios.get('http://127.0.0.1:5000/categories', {
+        axios.get('/categories', {
             headers: {
                 Authorization: 'Bearer ' + sessionToken,
                 Accept: 'application/json',
@@ -45,7 +46,7 @@ const CategoriesMenu = ()=>  {
     }, []);
     return (
         !loading&&<div className={'CategoriesMenu'}>
-                {categories.map(c => <ButtonMenu key={c.name} name={''} path={'categories/'+c.id} src={logos[c.name]}/>)}
+                {categories.map(c => <ButtonMenu key={c.name} name={c.name} path={'../categories/'+c.id} src={logos[c.name]}/>)}
         </div>
     );
 };

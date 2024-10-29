@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React, {useEffect} from 'react';
 import {Descope, useSession} from "@descope/react-sdk";
 import {useNavigate} from "react-router-dom";
@@ -16,7 +17,6 @@ const Login = () => {
             {!isAuthenticated&&<Descope
                 flowId={'sign-up-or-in'}
                 onSuccess={(e) => {
-
                     navigate("/profile");
                     console.log("Logged in!");
                 }}

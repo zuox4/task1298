@@ -8,7 +8,7 @@ const ModalReg = ({ isOpen, setIsOpen, setNickName }) => {
     const [name, setName] = React.useState("");
 
     function handleSaveButton(){
-        axios.post('http://127.0.0.1:5000/create_user',{username:name}, {
+        axios.post('http://192.168.1.7:2502/create_user',{username:name}, {
             headers: {
                 Authorization: 'Bearer ' + sessionToken,
                 Accept: 'application/json',

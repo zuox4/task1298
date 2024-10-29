@@ -1,0 +1,41 @@
+.MainInfo{
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    height: 100px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid gray;
+}
+.reiting >img{
+    height: 25px;
+    width: 25px;
+
+}
+.logouser{
+    height: inherit;
+    width: fit-content;
+    border-radius: 100px;
+}
+.name, .className{
+    font-weight: 500;
+    font-family: Inter, sans-serif;
+    font-size: 17px;
+}
+.number{
+    font-family: Inter, sans-serif;
+    font-size: 25px;
+    font-weight: 900;
+    line-height: 1;
+}
+.reiting, .position{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 6px;
+
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

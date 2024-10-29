@@ -8,7 +8,7 @@ const LogoutButton = () => {
     }, [logout])
 
     return (
-        <div onClick={() => handleLogout()}>Выйти</div>
+        <div className={'logout'} onClick={() => handleLogout()}>Выйти</div>
     );
 };
 

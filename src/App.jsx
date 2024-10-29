@@ -7,6 +7,7 @@ import Profile from "./Root/Profile/Profile.jsx";
 import Login from "./Login.jsx";
 import Tasks from "./Root/TaskShop/Tasks.jsx";
 import ProtectedRoute from "./ProtectedRoute.jsx";
+import CategoryPage from "./Root/TaskShop/Task/CategoryPage.jsx";
 
 const router = createBrowserRouter([
     {
@@ -26,6 +27,15 @@ const router = createBrowserRouter([
             {
                 path: "tasks",
                 element: <ProtectedRoute elem={ <Tasks />}/>,
+                children:[
+                    {
+
+                    }
+                ]
+            },
+            {
+                path: "categories/:categoryId",
+                element: <CategoryPage/>,
             }
                 ],
     },

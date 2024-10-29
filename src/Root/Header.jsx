@@ -6,6 +6,9 @@ const Header = ({ nickName}) => {
     return (
         <div className={'header'}>
             <img src={logo} alt={''}/>
+            <div className={'infocoins'}>
+                12312 KCoins
+            </div>
             {/*<div className={'about-user'}>*/}
             {/*    <div className={'nick-name'}>{nickName}</div>*/}
             {/*    /!*<LogoutButton/>*!/*/}

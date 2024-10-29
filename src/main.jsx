@@ -3,7 +3,8 @@ import {createRoot} from 'react-dom/client'
 import {AuthProvider} from "@descope/react-sdk";
 import App from './App.jsx'
 import './index.css'
-
+import axios from "axios";
+axios.defaults.baseURL = 'https://servertask-nine.vercel.app/';
 createRoot(document.getElementById('root')).render(
   <StrictMode>
       <AuthProvider

@@ -4,7 +4,12 @@ import axios from "axios";
 import ModalReg from "../ModalReg.jsx";
 import {useOutletContext} from "react-router-dom";
 import LogoutButton from "../Logout.jsx";
-
+import MainInfo from "./MainInfo.jsx";
+import './Profile.css'
+import ConfirmTaskInfoButton from "../MyTasks/ConfirmTaskInfoButton.jsx";
+import ListOptions from "./ListOptions.jsx";
+import Option from "./Option.jsx";
+import Taper from "./Taper/Taper.jsx";
 const Profile = () => {
     const {isAuthenticated} = useSession();
     const {user} = useUser()
@@ -16,7 +21,7 @@ const Profile = () => {
 
     useEffect(() => {
         setLoading(true)
-        axios.get('http://127.0.0.1:5000/get_user', {
+        axios.get('/get_user', {
             headers: {
                 Authorization: 'Bearer ' + sessionToken,
                 Accept: 'application/json',
@@ -37,20 +42,28 @@ const Profile = () => {
 
 
     return (
-        isAuthenticated&&!loading&& <div style={{display:"flex", flexDirection:"row"}}>
+        isAuthenticated&&!loading&&
+        <>
             <ModalReg isOpen={open} setNickName={setNickName} setIsOpen={setIsOpen}/>
-            <div className={'TasksPage'}>
-                <LogoutButton/>
-            </div>
-                {/*<TaskShop/>*/}
-            {/*<ul style={{padding: 0, display: "flex", flexDirection: "row", flexWrap: "wrap"}}>*/}
-            {/*    <div style={{width: '90px', height: '200px', padding: '10px', backgroundColor: 'white'}}>*/}
-            {/*        <img src={dataList.url} alt={''} style={{width: 'inherit'}}/>*/}
-            {/*        <span>{dataList.name}</span>*/}
-            {/*    </div>*/}
-            {/*</ul>*/}
+            <div className="Profile">
+                <MainInfo/>
+                <ConfirmTaskInfoButton/>
+                <ListOptions>
+                    <Option elem={<LogoutButton/>}/>
 
-        </div>
+                </ListOptions>
+                <Taper/>
+            </div>
+
+        </>
+
+
+
+
+
+
+
+
     );
 };
 
