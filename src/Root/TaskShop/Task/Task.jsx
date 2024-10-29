@@ -33,7 +33,7 @@ const Task = ({task})=> {
             {openModal&&<ModalQuestion openModal={openModal} setOpenModal={setOpenModal}/>}
             <div className={'infoTask'} style={{gridTemplateColumns:!task.urgency&&'min-content 1fr 1fr'}}>
                 {task.urgency&&<img style={{width:'10px', marginRight:'5px'}} src={molniya} alt={''}/>}
-                {/*<img src={logos[task['categoryId']]} alt={''}/>*/}
+                <img src={logos[task['categoryId']]} alt={''}/>
                 <span className={'hashteger'}>{task.hashtags.map(tag=>tag + ' ')}</span>
                 <div className={'customer'}><span>{task.author}</span></div>
             </div>
