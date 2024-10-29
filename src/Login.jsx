@@ -17,7 +17,7 @@ const Login = () => {
             {!isAuthenticated&&<Descope
                 flowId={'sign-up-or-in'}
                 onSuccess={(e) => {
-                    navigate("/profile");
+                    navigate("/tasks");
                     console.log("Logged in!");
                 }}
                 onError={(e) => console.log("Error!")}
