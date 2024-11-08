@@ -730,7 +730,7 @@ const Tasks = () => {
         <div className={'TasksPage'} style={{overflowY:'scroll'}}>
             {!openAllTasks?<Input text={fintElementText} setText={setFintElementText} setFiltered={setFilterTask} />:<NavigateInfoBar setOpenAllTasks={setOpenAllTasks} />}
             {!openAllTasks&&!filterTask&&<CategoriesMenu/>}
-            <div className={'all-tasks'} style={{width:'100%'}}>
+            <div className={'all-tasks'}>
                 {!openAllTasks&&<ButtonOpenAll setOpenAllTasks={setOpenAllTasks} openAllTasks={openAllTasks} />}
 
                 {(openAllTasks||filterTask)&&<AllTasksList data={filteredTasks} filterTask={filterTask} />}
