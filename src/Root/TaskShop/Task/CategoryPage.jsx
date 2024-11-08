@@ -8,12 +8,11 @@ const CategoryPage = () => {
     const {state} = useLocation()
     
     return (
-        <div style={{marginTop:'80px', width:'100%', display:'flex', flexDirection:'column', alignItems:'center'}}>
+        <>
+            <NavigateInfoBar click={() => navigate(-1)} name={state.name}/>
+            Категория N{state.name}
+        </>
 
-                <NavigateInfoBar click={() => navigate(-1)} name={state.name}/>
-                Категория N{categoryId}
-
-        </div>
     );
 };
 

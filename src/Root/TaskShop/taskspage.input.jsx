@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import finder from '../../assets/finderinp.svg';
 
 const Input = ({ text, setText, setFiltered }) => {
@@ -7,8 +6,6 @@ const Input = ({ text, setText, setFiltered }) => {
     const handleInputChange = (e) => {
         const value = e.target.value;
         setText(value);
-
-        // Упростим условие с помощью тернарного оператора
         setFiltered(value.length > 0);
     };
 
@@ -24,12 +21,4 @@ const Input = ({ text, setText, setFiltered }) => {
         </div>
     );
 };
-
-// Добавим проверки типов с PropTypes
-Input.propTypes = {
-    text: PropTypes.string.isRequired,
-    setText: PropTypes.func.isRequired,
-    setFiltered: PropTypes.func.isRequired,
-};
-
 export default Input;

@@ -37,6 +37,7 @@ const CategoriesMenu = () => {
                 }
             });
             setCategories(data.categories);
+            console.log(data.categories);
         } catch (error) {
             console.error('Error loading categories:', error);
         } finally {
@@ -49,7 +50,7 @@ const CategoriesMenu = () => {
     }, []);
 
     if (loading) {
-        return <div>Loading...</div>; // Может быть красивый индикатор загрузки
+        return <div className={'loader'} style={{width:'10px', height:'10px'}}></div>; // Может быть красивый индикатор загрузки
     }
 
     return (

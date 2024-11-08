@@ -2,7 +2,7 @@ import React from 'react';
 import Task from "./Task/Task.jsx";
 import './Tasks.css'
 
-const AllTasksList = ({ filterTask, data }) => {
+const AllTasksList = ({ data }) => {
     return (
         <div
             className={'all-task-list'}>

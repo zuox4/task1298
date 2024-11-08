@@ -2,7 +2,7 @@
   overflow-y: clip;
   height: 100vh;
   margin:0;
-
+  background: white;
   padding: 0;
 }
 body{
@@ -11,14 +11,16 @@ body{
   padding: 0;
 
 }
+
 body>h1{
   margin:0;
   padding: 0;
-
 }
+
 ::-webkit-scrollbar {
   width: 0;
 }
+
 .load{
   height: 100vh;
   display: flex;
