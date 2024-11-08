@@ -1,8 +1,8 @@
 #root{
-
+  overflow-y: hidden;
   height: 100vh;
   margin:0;
-  overflow-y: clip;
+
   padding: 0;
 }
 body{
