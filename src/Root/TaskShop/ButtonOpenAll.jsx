@@ -14,7 +14,6 @@ const ButtonOpenAll = ({ setOpenAllTasks, openAllTasks }) => {
         alignItems: 'center', // центруем текст по вертикали
         justifyContent: 'center', // центруем текст по горизонтали
         textTransform: 'uppercase',
-
     };
 
     return (

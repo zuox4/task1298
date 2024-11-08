@@ -704,14 +704,12 @@ const Tasks = () => {
         },
     ];
 
-    const {isAuthenticated, isSessionLoading} = useSession()
-    const {isUserLoading} = useUser()
     const [fintElementText, setFintElementText] = React.useState("");
     const [openAllTasks, setOpenAllTasks] = React.useState(false);
     const [filterTask, setFilterTask] = React.useState(false);
     const [tasks, setTasks] = React.useState(tasks1);
     const [filteredTasks, setFilteredTasks] = React.useState(null);
-    const [loading, setLoading] = React.useState(false);
+
     function filter() {
         const filteredList = tasks.filter((task) => {
             const titleMatch = task.title.toLowerCase().includes(fintElementText.toLowerCase());
@@ -727,17 +725,15 @@ const Tasks = () => {
 
 
     return (
-        <div className={'TasksPage'} style={{overflowY:'scroll'}}>
-            {!openAllTasks?<Input text={fintElementText} setText={setFintElementText} setFiltered={setFilterTask} />:<NavigateInfoBar setOpenAllTasks={setOpenAllTasks} />}
+    <>
+            <NavigateInfoBar setFilterTask={setFilterTask} openAllTasks={openAllTasks} fintElementText={fintElementText} setFintElementText={setFintElementText} setOpenAllTasks={setOpenAllTasks}/>
             {!openAllTasks&&!filterTask&&<CategoriesMenu/>}
             <div className={'all-tasks'}>
                 {!openAllTasks&&<ButtonOpenAll setOpenAllTasks={setOpenAllTasks} openAllTasks={openAllTasks} />}
 
                 {(openAllTasks||filterTask)&&<AllTasksList data={filteredTasks} filterTask={filterTask} />}
             </div>
-
-        </div>
-
+    </>
     );
 };
 

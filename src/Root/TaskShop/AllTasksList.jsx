@@ -1,5 +1,6 @@
 import React from 'react';
 import Task from "./Task/Task.jsx";
+import './Tasks.css'
 
 const AllTasksList = ({ filterTask, data }) => {
     return (
@@ -7,7 +8,6 @@ const AllTasksList = ({ filterTask, data }) => {
             className={'all-task-list'}>
             {data.map((task, index) => (
                 <div key={index}>
-                    {/* Здесь вы можете отобразить свойства задачи, например: */}
                     <Task task={task}/>
                 </div>
             ))}

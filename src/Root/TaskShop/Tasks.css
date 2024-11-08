@@ -13,21 +13,19 @@
     width: 100%;
     height: 86vh;
     overflow: hidden;
-    /* margin-top: 60px;
-
 }
+
 .tasks-input{
     display: flex;
-    position: fixed;
     flex-direction: row;
     align-items: center;
     background-color: #ebebeb;
     height: 50px;
-    width: 90%;
-    /*top: 65px;*/
+    width: 100%;
 
     border-radius: 5px;
 }
+
 .tasks-input>input{
     font-family: "IBM Plex Sans", sans-serif;
     font-size: 18px;
@@ -39,49 +37,46 @@
     padding-left: 10px;
 }
 
-.navigate-bar{
-    /* position: fixed; */
-    /* flex-direction: row; */
-    /* align-items: center; */
-    /* background-color: #fff; */
-    height: 98px;
+.navigate-bar {
+
+    height: 45px;
     width: 100%;
-/* display: grid; */
-/* grid-template-columns: 1fr 15fr; */
-/* display: flex; */
-/* padding: 0 5px; */
-/* border-radius: 5px; */
-/* align-content: center; */
-/* border-bottom: 1px solid gray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
- */
-.navigate-bar>img{
-position: absolute;
-left: 30px;
-width: 23px;
-top: 9px;
-height: 36px;
+
+.nav-conteiner{
+    height: 50px;
+    width: 100%;
+    margin-bottom: 10px;
 }
+.navigate-bar>img{
+    width: 23px;
+    height: 36px;
+    margin-right: auto;
+}
+
 .navigate-bar>h3{
-font-family: "IBM Plex Sans", sans-serif;
-font-weight: 500;
-text-transform: uppercase;
-text-align: center;
-font-size: 17px;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 17px;
+    position: absolute; /* Позволяет точное позиционирование */
+    left: 50%;          /* Перемещает центральный элемент к центру контейнера */
+    transform: translateX(-50%); /* Центрирует элемент, перемещённый на 50% */
 }
 
 .all-tasks{
     width: 100%;
-    overflow-y: scroll;}
+    overflow-y: scroll;
 }
 
-.all-tasks-list{
 
-align-items: center;
-    /* margin-top: 70px; */
+.all-task-list{
+    align-items: center;
     display: flex;
     flex-direction: column;
-    gap: 25px;
-
+    row-gap: 13px;
 }
